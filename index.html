@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="topBox">
+      <div class="hang">
+        <img src="gallows.png" alt="gallows" class="hangImg" />
+        <div class="head" data-head data-parts></div>
+        <div class="body" data-body data-parts></div>
+        <div class="leftHand" data-leftHand data-parts></div>
+        <div class="rightHand" data-rightHand data-parts></div>
+        <div class="leftLeg" data-leftLeg data-parts></div>
+        <div class="rightLeg" data-rightLeg data-parts></div>
+      </div>
+      <div class="passwordBox">
+        <h1 class="category" data-category>Kategoria</h2>
+        <h2 class="password" data-password></h1>
+      </div>
+    </div>
+    <div class="keyboard" data-keyboard></div>
+    <div class="resultWrapper" data-resultBox>
+      <div class="infoBox">
+        <h2 class="info" data-info></h2>
+        <p class="infoAboutPassword" data-infoAboutPassword></p>
+        <button class="playAgain" data-playAgainBtn>Zagraj jeszcze raz</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      const game = new Hangman();
+      game.initializeHangman();
+    </script>
+  </body>
+</html>
